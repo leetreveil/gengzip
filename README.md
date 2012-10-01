@@ -1,3 +1,5 @@
+[![Build Status](https://secure.travis-ci.org/leetreveil/gengzip.png)](http://travis-ci.org/leetreveil/gengzip)
+
 gengzip
 ------------
 Python generators are cool. The ``` compress() ``` function returns a python generator with the gzipped data.
