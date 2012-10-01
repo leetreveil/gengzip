@@ -24,11 +24,11 @@ def write_gzip_header():
 def write_gzip_footer(crc, size):
     footer = ''
     footer += write32u(crc)
-    footer += write32u(size & 0xffffffffL)
+    footer += write32u(size & 0xffffffff)
     return footer
 
 def compress(input):
-    crc  = zlib.crc32('') & 0xffffffffL
+    crc  = zlib.crc32('') & 0xffffffff
     size = 0
 
     yield write_gzip_header()
@@ -38,7 +38,7 @@ def compress(input):
     compress = zlib.compressobj(9, zlib.DEFLATED, -zlib.MAX_WBITS, zlib.DEF_MEM_LEVEL, 0)
     
     for data in input:
-        crc = zlib.crc32(data, crc) & 0xffffffffL
+        crc = zlib.crc32(data, crc) & 0xffffffff
         size += len(data)
         yield compress.compress(data)
 
