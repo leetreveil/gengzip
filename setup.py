@@ -8,5 +8,5 @@ setup(
     author = 'Lee Treveil',
     author_email = 'leetreveil@gmail.com',
     url = 'https://github.com/leetreveil/gengzip',
-    description = 'A python module for gzipping data in python with generators',
+    description = 'A python module for gzipping data using generators',
 )
