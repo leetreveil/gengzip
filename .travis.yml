@@ -3,4 +3,4 @@ python:
  - "2.6"
  - "2.7"
 
-script: python gengzip.py
+script: python test.py
