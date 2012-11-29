@@ -46,5 +46,8 @@ class tests(unittest.TestCase):
         result = decompress_data(sio)
         self.assertEqual(result, '')
 
+    def test_should_be_able_to_set_the_compression_level(self):
+        list(compress('', compresslevel=1))
+
 if __name__ == '__main__':
     unittest.main()
