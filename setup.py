@@ -3,7 +3,7 @@ from distutils.core import setup
 
 setup(
     name = 'gengzip',
-    version = '0.2.0',
+    version = '0.2.1',
     py_modules=['gengzip'],
     author = 'Lee Treveil',
     author_email = 'leetreveil@gmail.com',
