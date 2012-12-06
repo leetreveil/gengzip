@@ -29,5 +29,6 @@ def compress(input, compresslevel=6):
     for data in input:
         crc = zlib.crc32(data, crc) & 0xffffffffL
         size += len(data)
-        yield compress.compress(data)
+        compressed = compress.compress(data)
+        if len(compressed) > 0: yield compressed
     yield compress.flush() + write_gzip_footer(crc, size)
